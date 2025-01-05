@@ -3,7 +3,7 @@ import OpenAI from 'openai';
 
 
 
-console.log("ENVE",process.env.OPENAI)
+// console.log("ENVE",process.env.OPENAI)
 const openai = new OpenAI({
   apiKey: process.env.OPENAI
 });
