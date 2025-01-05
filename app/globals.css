@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.camera-container {
+  aspect-ratio: 4/3;
+  max-height: 70vh;
+}
+
+.capture-btn {
+  background: linear-gradient(135deg, #e63946 0%, #d62b39 100%);
+  transition: all 0.3s ease;
+}
+
+.capture-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+}
+
+.result-card {
+  background: linear-gradient(135deg, #1d3557 0%, #14253d 100%);
+}
+
+.info-card {
+  background: linear-gradient(135deg, #457b9d 0%, #2b5d7d 100%);
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.file-drop-zone {
+  border: 2px dashed #457b9d;
+  transition: all 0.3s ease;
+}
+
+.file-drop-zone:hover {
+  border-color: #e63946;
+  background-color: rgba(230, 57, 70, 0.1);
+}
+
